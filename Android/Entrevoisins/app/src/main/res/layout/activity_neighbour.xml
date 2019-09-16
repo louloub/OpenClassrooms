@@ -10,6 +10,31 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <ImageView
+            android:id="@+id/neighbourImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="500dp"
+            android:adjustViewBounds="true"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <!--<android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -39,7 +64,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
-    </android.support.design.widget.AppBarLayout>
+    </android.support.design.widget.AppBarLayout>-->
 
     <include layout="@layout/content_neighbour" />
 
