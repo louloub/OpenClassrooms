@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.openclassrooms.entrevoisins.model.Neighbour;
@@ -34,52 +35,18 @@ public class NeighbourActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ImageView neighbourImage = findViewById(R.id.neighbourImage);
-
-        // TODO : set neighbour image in background
+        TextView texViewNeighbourName = findViewById(R.id.neighbourName);
+        TextView texViewNeighbourLocation = findViewById(R.id.neighbourLocation);
+        TextView texViewNeighbourTelephone = findViewById(R.id.neighbourTelephone);
+        TextView texViewNeighbourLink = findViewById(R.id.neighbourLink);
 
         String photoUrl = neighbour.getAvatarUrl();
-
-        // toolbar.setBackgroundResource(R.drawable.ic_star_yellow_24dp);
 
         Glide.with(getApplicationContext())
                 .load(photoUrl)
                 .into(neighbourImage);
 
-        /*URL url_value = null;
-        try {
-            url_value = new URL(photoUrl);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        // ImageView profile = (ImageView)v.findViewById(R.id.vdo_icon);
-        Bitmap mIcon1 = null;
-        try {
-            assert url_value != null;
-            mIcon1 = BitmapFactory.decodeStream(url_value.openConnection().getInputStream());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
-        // toolbar.setBackground(Drawable.createFromPath(neighbour.getAvatarUrl()));
-
-        /*URL urlOfPhoto = null;
-        try {
-            urlOfPhoto = new URL(photoUrl);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        Bitmap bmp = null;
-        try {
-            assert urlOfPhoto != null;
-            bmp = BitmapFactory.decodeStream(urlOfPhoto.openConnection().getInputStream());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        toolbar.setBackground(bmp);*/
-
-        // ImageView iv_photo = findViewById(R.id.toolbar_layout);
-
-        // toolbar.setBackground();
+        texViewNeighbourName.setText(neighbour.getName());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
