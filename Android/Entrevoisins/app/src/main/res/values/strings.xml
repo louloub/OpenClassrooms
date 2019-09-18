@@ -3,6 +3,11 @@
     <string name="tab_neighbour_title">My neighbours</string>
     <string name="tab_favorites_title">Favorites</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="neighbourAboutMeText">Bonjour!Je souhaiterais faire de la marche nordique.
+        Pas initiée, je recherche une ou plusieurs personnes susceptibles de m\'accomapgner! J\'aime
+    les jeux de cartes tels la belote et le tarot..</string>
+    <string name="aboutme">A propos de moi</string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

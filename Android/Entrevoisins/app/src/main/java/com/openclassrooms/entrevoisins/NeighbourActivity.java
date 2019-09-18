@@ -10,6 +10,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,9 +37,8 @@ public class NeighbourActivity extends AppCompatActivity {
 
         ImageView neighbourImage = findViewById(R.id.neighbourImage);
         TextView texViewNeighbourName = findViewById(R.id.neighbourName);
-        TextView texViewNeighbourLocation = findViewById(R.id.neighbourLocation);
-        TextView texViewNeighbourTelephone = findViewById(R.id.neighbourTelephone);
-        TextView texViewNeighbourLink = findViewById(R.id.neighbourLink);
+        TextView textViewNeighbourNameOnImage = findViewById(R.id.neighbourNameOnImage);
+        ImageView backButton = findViewById(R.id.backbutton);
 
         String photoUrl = neighbour.getAvatarUrl();
 
@@ -47,13 +47,23 @@ public class NeighbourActivity extends AppCompatActivity {
                 .into(neighbourImage);
 
         texViewNeighbourName.setText(neighbour.getName());
+        textViewNeighbourNameOnImage.setText(neighbour.getName());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                // NeighbourActivity.super.onBackPressed();
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NeighbourActivity.super.onBackPressed();
             }
         });
     }

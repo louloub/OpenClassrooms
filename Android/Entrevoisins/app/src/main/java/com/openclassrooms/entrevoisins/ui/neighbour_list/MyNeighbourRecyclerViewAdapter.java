@@ -64,12 +64,8 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // TODO : when we click on item in list, it's open new activity
-
                 Intent intent = new Intent(holder.itemView.getContext(), NeighbourActivity.class);
                 intent.putExtra("neighbour", neighbour);
-
                 holder.itemView.getContext().startActivity(intent);
             }
         });
