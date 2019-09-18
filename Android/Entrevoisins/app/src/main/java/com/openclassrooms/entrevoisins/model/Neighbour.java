@@ -17,6 +17,9 @@ public class Neighbour implements Serializable {
     /** Avatar */
     private String avatarUrl;
 
+    /** Favorites */
+    private boolean isFavorites;
+
     /**
      * Constructor
      * @param id
@@ -28,6 +31,8 @@ public class Neighbour implements Serializable {
         this.name = name;
         this.avatarUrl = avatarUrl;
     }
+
+    public Neighbour() {}
 
     public Integer getId() {
         return id;
@@ -51,6 +56,14 @@ public class Neighbour implements Serializable {
 
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
+    }
+
+    public boolean isFavorites() {
+        return isFavorites;
+    }
+
+    public void setFavorites(boolean favorites) {
+        isFavorites = favorites;
     }
 
     @Override
